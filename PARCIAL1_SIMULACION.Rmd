@@ -1,0 +1,9 @@
+---
+title: "Parcial1Simulacion"
+author: "JOHN ALEXANDER MARTINEZ Y LEONARDO FABIO HERRERA"
+date: '2022-03-24'
+output: html_document
+---
+
+1. La tabla mostrada contiene valores de población, en cientos de miles, de las diez ciudades más
+pobladas de cuatro países en el año 1967:
