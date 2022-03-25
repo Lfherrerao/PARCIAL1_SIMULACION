@@ -111,6 +111,13 @@ plot(0:600, 1-pnorm(0:600, mean=400,sd=5)
      main =expression(paste("Distribucion normal donde ",mu==400," ",sigma==5)),
      pch=19,col= "green" )
 
+
+x<-c(0:800,50)
+y<-dnorm(x,400,5)
+plot(x,y,main ="Distribucion normal()",xlab="Numero de habitantes", ylab="Probabilidad", col="red", pch=19)
+
+
+
 ```
 
 
