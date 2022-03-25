@@ -41,7 +41,7 @@ Japon<-c(110.21,32.14,18.88,16.38,13.37,11.92,10.71,7.80,7.70,7.00)
 par(mfrow = c(1,4))
 
 boxplot(argentina, main = 'ARGENTINA', col='red', ylab='POBLACION', xlab='grafico A')
-boxplot(EEUU,main = 'EE.UU',col='blue',ylab='POBLACION',xlab='grafico B', plot=F)
+boxplot(EEUU,main = 'EE.UU',col='blue',ylab='POBLACION',xlab='grafico B')
 boxplot(Holanda ,main = 'HOLANDA',col='green',ylab='POBLACION',ylab='POBLACION',xlab='grafico C')
 boxplot(Japon,main = 'JAPON',col='pink',ylab='POBLACION',xlab='grafico D')
 
