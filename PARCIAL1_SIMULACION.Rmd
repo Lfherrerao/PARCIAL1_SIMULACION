@@ -13,7 +13,7 @@ output:
 1. La tabla mostrada contiene valores de población, en cientos de miles, de las diez ciudades más
 pobladas de cuatro países en el año 1967:
 
-<<<<<<< HEAD
+
 Argentina EE. UU. Holanda Japón
 29.66 77.81 8.68 110.21
 7.61 35.50 7.31 32.14
@@ -40,18 +40,18 @@ Japon<-c(110.21,32.14,18.88,16.38,13.37,11.92,10.71,7.80,7.70,7.00)
 
 
 
-par(mfrow = c(2,2))
+par(mfrow = c(1,4))
 
-boxplot(argentina, horizontal = TRUE, main = 'ARGENTINA', col='red')
-boxplot(EEUU, horizontal = TRUE,main = 'EE.UU',col='blue')
-boxplot(Holanda, horizontal = TRUE,main = 'HOLANDA',col='green')
-boxplot(Japon, horizontal = TRUE,main = 'JAPON',col='pink')
+boxplot(argentina, main = 'ARGENTINA', col='red', ylab='POBLACION')
+boxplot(EEUU,main = 'EE.UU',col='blue')
+boxplot(Holanda ,main = 'HOLANDA',col='green')
+boxplot(Japon,main = 'JAPON',col='pink')
 
 
 
 ```
 
-<<<<<<< HEAD
+
 2. Avianca se encuentra estudiando la situación de venta de puesto en el vuelo Armenia – Bogotá puesto
 que ha identificado que el 2% de las personas que reservaron puesto, no se presentan a la hora del
 embarque. Teniendo en cuenta que el avión A320 utilizado en esta ruta tiene una capacidad para 180
