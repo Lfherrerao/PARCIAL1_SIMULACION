@@ -57,15 +57,46 @@ boxplot(Japon,main = 'JAPON',col='pink',ylab='POBLACION',xlab='grafico D')
 ***Grafico A:***En este boxplot podemos observar que  hay un dato atipico o outliers, el promedio es de 3.27, de su simetria podemos decir que es positiva y asimetrica lo que quiere decir que la mayoria de los datos se concentran en la parte inferior de la distribucion.
 
 \n
-***Grafico B:***En la grafica B podemos decir que el quartil1 esta aproximado a 7.5 y su media se aproxima en 13, de su simetria podemos concluir que es positiva, ya que la mayoria de sus datos se encuentran en los ramgos de menor valo, hay un outlier con un valor aproximado a  77\n
+***Grafico B:***En la grafica B podemos decir que el quartil1 esta aproximado a 7.5 y su media se aproxima en 13, de su simetria podemos concluir que es positiva, ya que la mayoria de sus datos se encuentran en los ramgos de menor valo, hay un outlier con un valor aproximado a  77.
 
 
-***Grafico C:***Por medio de esta grafica podemos concluir que su simetria esta sesgada a la derecha, por la ubicacion del quartil 3 podems decir que su media, mediana y moda no coinciden, no se encuentran datos atipicos, con respecto a las graficas A,B,D,E encontramos que su su rango es mas amplio, por lo que sus datos estan mas dispersos.  \n
+***Grafico C:***Por medio de esta grafica podemos concluir que su simetria esta sesgada a la derecha, por la ubicacion del quartil 3 podems decir que su media, mediana y moda no coinciden, no se encuentran datos atipicos, con respecto a las graficas A,B, y E encontramos que su su rango es mas amplio, por lo que sus datos estan mas dispersos.  
 
 
-***Grafico D:***En este boxplot podemos observar \n
+***Grafico D:****Por medio de esta grafica podemos concluir que su simetria esta sesgada a la derecha, por la ubicacion del quartil 3 podems decir que su media, mediana y moda se asemejan,  se encuentra un datos atipicos, con respecto a las graficas A,B Y C encontramos que su su rango es el menos  amplio, por lo que sus datos estan menos dispersos.  
+
 
 b)Compare los centros de cada población, sus dispersiones y su simetría. ¿Cuál es el país más homogéneamente habitado? ¿Cuáles son las características más sobresalientes? ¿Hay outliers?
+
+```{r, echo=FALSE}
+
+par(mfrow = c(2,2))
+
+
+hist(argentina, main = 'ARGENTINA', col='red', ylab='POBLACION', xlab='grafico A')
+hist(EEUU,main = 'EE.UU',col='blue',ylab='POBLACION',xlab='grafico B')
+hist(Holanda ,main = 'HOLANDA',col='green',ylab='POBLACION',xlab='grafico C')
+hist(Japon,main = 'JAPON',col='pink',ylab='POBLACION',xlab='grafico D')
+
+
+```
+
+
+**INTERPRETACION**
+
+***Grafico A:***En esta grafica podemos observar que hay  outli, de su simetria podemos decir que es positiva y asimetrica lo que quiere decir que la mayoria de los datos se concentran en la parte inferior de la distribucion.
+
+***Grafico B:***En la grafica B podemos decir que  su simetria  es positiva, ya que la mayoria de sus datos se encuentran en los ramgos de menor valo, hay un outlier con un valor que se encuentra en el rango de 60 a 80.
+
+
+***Grafico C:***Por medio de esta grafica podemos concluir que su simetria esta sesgada a la derecha, no se encuentran datos atipicos, con respecto a las graficas A,B, y E encontramos que su su rango es mas amplio, por lo que sus datos estan mas dispersos.  
+
+
+***Grafico D:****Por medio de esta grafica podemos concluir que su simetria esta sesgada a la derecha,  se encuentra un datos atipicos, con respecto a las graficas A,B Y C encontramos que su su rango es el menos  amplio, por lo que sus datos estan menos dispersos.
+
+
+
+
 
 2. Avianca se encuentra estudiando la situación de venta de puesto en el vuelo Armenia – Bogotá puesto
 que ha identificado que el 2% de las personas que reservaron puesto, no se presentan a la hora del
@@ -79,9 +110,10 @@ La probabilidad de que todas las personas que lleguen a embarque puedan tener su
 ```{r,echo=FALSE}
 
 p=0.02
-n=180
+n=181
 
 lambda=n*p
+
 #lambda 3.6 serian las personas que no se presentan a embarque
 #el 98% seria el valor de las personas que se presentan a embarque = 176.4
 #ppois(181,176.4)
