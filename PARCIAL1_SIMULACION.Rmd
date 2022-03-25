@@ -28,7 +28,7 @@ Argentina EE. UU. Holanda Japón
 
 
 =======
-```{r}
+```{r, echo=F}
 
 
 #library(cowplot)
@@ -59,7 +59,7 @@ pasajeros, la empresa decide vender 181 tiquetes. ¿Cuál es la probabilidad de 
 llegan a embarque puedan tener su silla asegurada y no se presenten quejas por “sobre-vender” sillas ante
 la aeronáutica civil? Asuma que las llegadas de los pasajeros siguen una distribución Poisson.
 
-```{r}
+```{r, echo=F}
 p=0.02
 n=180
 
@@ -85,5 +85,3 @@ gaseosa que son declaradas producto NO CONFORME.
 
 
 =======
->>>>>>> 4a961ef6f6f430655b580015edcc6736ae6dc50b
->>>>>>> 920f79bdfedb4a09ab13a5d08545ff5757a4d7eb
