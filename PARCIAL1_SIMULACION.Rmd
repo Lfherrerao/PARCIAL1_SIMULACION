@@ -27,7 +27,6 @@ Argentina EE. UU. Holanda Japón
 2.4 4 7.50 1.29 7.00
 
 
-=======
 ```{r, echo=F,message=FALSE, warning=FALSE}
 
 
@@ -42,17 +41,33 @@ Japon<-c(110.21,32.14,18.88,16.38,13.37,11.92,10.71,7.80,7.70,7.00)
 par(mfrow = c(1,4))
 
 boxplot(argentina, main = 'ARGENTINA', col='red', ylab='POBLACION', xlab='grafico A')
-boxplot(EEUU,main = 'EE.UU',col='blue',xlab='grafico B')
-boxplot(Holanda ,main = 'HOLANDA',col='green',xlab='grafico C')
-boxplot(Japon,main = 'JAPON',col='pink',xlab='grafico D')
+boxplot(EEUU,main = 'EE.UU',col='blue',ylab='POBLACION',xlab='grafico B')
+boxplot(Holanda ,main = 'HOLANDA',col='green',ylab='POBLACION',ylab='POBLACION',xlab='grafico C')
+boxplot(Japon,main = 'JAPON',col='pink',ylab='POBLACION',xlab='grafico D')
+
+par(mfrow = c(2,2))
+hist(argentina)
+hist(EEUU)
+hist(Holanda)
+hist(Japon)
 
 
 
 ```
-##INTERPRETACION
 
-**Grafico A:**
-En este boxplot podemos observar 
+
+**INTERPRETACION**
+
+***Grafico A:***En este boxplot podemos observar que  hay un dato atipico o outliers, el promedio es de 3.27, de su simetria podemos decir que es positiva lo que quiere decir que la mayoria de los datos se encuntran concentrados en los valores menores. 
+
+\n
+***Grafico B:***En la grafica B podemos decir que el quartil1 esta aproximado a 7.5 y su media se aproxima en 13, de su simetria podemos concluir que es positiva, ya que la mayoria de sus datos se encuentran en los ramgos de menor valor.\n
+
+
+***Grafico C:***En este boxplot podemos observar \n
+
+
+***Grafico D:***En este boxplot podemos observar \n
 
 2. Avianca se encuentra estudiando la situación de venta de puesto en el vuelo Armenia – Bogotá puesto
 que ha identificado que el 2% de las personas que reservaron puesto, no se presentan a la hora del
