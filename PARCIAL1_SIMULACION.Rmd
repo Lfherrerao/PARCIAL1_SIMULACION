@@ -40,6 +40,14 @@ Japon<-c(110.21,32.14,18.88,16.38,13.37,11.92,10.71,7.80,7.70,7.00)
 
 
 
+par(mfrow = c(2,2))
+
+boxplot(argentina, horizontal = TRUE, main = 'ARGENTINA', col='red')
+boxplot(EEUU, horizontal = TRUE,main = 'EE.UU',col='blue')
+boxplot(Holanda, horizontal = TRUE,main = 'HOLANDA',col='green')
+boxplot(Japon, horizontal = TRUE,main = 'JAPON',col='pink')
+
+
 
 ```
 
