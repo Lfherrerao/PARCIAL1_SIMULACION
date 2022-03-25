@@ -106,8 +106,10 @@ media=400
 #p(x > 415) = 1-p(x <=415)
 1-pnorm(415,media,sd)
 
-plot(0:180,dpois(0:180,176.4),main =expression(paste("Poisson donde ",lambda==176.4)),
-     xlab= "pasajeros que embarcan ",ylab = "Probabilidad",pch=19,col= "green" )
+plot(0:600, 1-pnorm(0:600, mean=400,sd=5)
+     ,ylim=c(0,0.5),xlab= "NO CONFORME", ylab="Frecuencia",
+     main =expression(paste("Distribucion normal donde ",mu==400," ",sigma==5)),
+     pch=19,col= "green" )
 
 ```
 
