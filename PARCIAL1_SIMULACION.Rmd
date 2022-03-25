@@ -46,11 +46,6 @@ boxplot(EEUU,main = 'EE.UU',col='blue',ylab='POBLACION',xlab='grafico B')
 boxplot(Holanda ,main = 'HOLANDA',col='green',ylab='POBLACION',ylab='POBLACION',xlab='grafico C')
 boxplot(Japon,main = 'JAPON',col='pink',ylab='POBLACION',xlab='grafico D')
 
-par(mfrow = c(2,2))
-hist(argentina)
-hist(EEUU)
-hist(Holanda)
-hist(Japon)
 
 
 
@@ -90,8 +85,9 @@ lambda=n*p
 #ppois(181,176.4)
 1-sum(dpois (0:181, 176.4))
 
-plot(0:180,dpois(0:180,176.4),main =expression(paste("Poisson donde ",lambda==176.4)),
+plot(100:250,dpois(100:250,176.4),main =expression(paste("Poisson donde ",lambda==176.4)),
      xlab= "pasajeros que embarcan ",ylab = "Probabilidad",pch=19,col= "green" )
+abline(v = 176.4)
 
 ```
 
@@ -108,10 +104,13 @@ media=400
 #p(x > 415) = 1-p(x <=415)
 1-pnorm(415,media,sd)
 
-plot(0:600, 1-pnorm(0:600, mean=400,sd=5)
-     ,ylim=c(0,0.5),xlab= "NO CONFORME", ylab="Frecuencia",
+plot(380:420, dnorm(380:420, mean=400,sd=5), type = 'l'
+     ,xlab= "productos declaradosNO CONFORME", ylab="PROBABILIDAD",
      main =expression(paste("Distribucion normal donde ",mu==400," ",sigma==5)),
      pch=19,col= "green" )
+  abline(v = 400)
+  
+
 
 
 x<-c(0:800,50)
