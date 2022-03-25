@@ -13,7 +13,7 @@ output:
 1. La tabla mostrada contiene valores de población, en cientos de miles, de las diez ciudades más
 pobladas de cuatro países en el año 1967:
 
-<<<<<<< HEAD
+
 Argentina EE. UU. Holanda Japón
 29.66 77.81 8.68 110.21
 7.61 35.50 7.31 32.14
@@ -28,11 +28,10 @@ Argentina EE. UU. Holanda Japón
 
 
 =======
-```{r}
+```{r, echo=F,message=FALSE, warning=FALSE}
 
 
-#library(cowplot)
-library(ggplot2)
+
 argentina<-c(29.66,7.61,6.35,4.10,3.80,2.75,2.70,2.69,2.51,2.44)
 EEUU<-c(77.81,35.50,24.79,20.02,16.70,9.39,9.38,8.76,7.63,7.50)
 Holanda<-c(8.68,7.31,6.02,2.64,1.75,1.72,1.51,1.42,1.31,1.29)
@@ -40,18 +39,21 @@ Japon<-c(110.21,32.14,18.88,16.38,13.37,11.92,10.71,7.80,7.70,7.00)
 
 
 
-par(mfrow = c(2,2))
+par(mfrow = c(1,4))
 
-boxplot(argentina, horizontal = TRUE, main = 'ARGENTINA', col='red')
-boxplot(EEUU, horizontal = TRUE,main = 'EE.UU',col='blue')
-boxplot(Holanda, horizontal = TRUE,main = 'HOLANDA',col='green')
-boxplot(Japon, horizontal = TRUE,main = 'JAPON',col='pink')
+boxplot(argentina, main = 'ARGENTINA', col='red', ylab='POBLACION', xlab='grafico A')
+boxplot(EEUU,main = 'EE.UU',col='blue',xlab='grafico B')
+boxplot(Holanda ,main = 'HOLANDA',col='green',xlab='grafico C')
+boxplot(Japon,main = 'JAPON',col='pink',xlab='grafico D')
 
 
 
 ```
+##INTERPRETACION
 
-<<<<<<< HEAD
+**Grafico A:**
+En este boxplot podemos observar 
+
 2. Avianca se encuentra estudiando la situación de venta de puesto en el vuelo Armenia – Bogotá puesto
 que ha identificado que el 2% de las personas que reservaron puesto, no se presentan a la hora del
 embarque. Teniendo en cuenta que el avión A320 utilizado en esta ruta tiene una capacidad para 180
@@ -59,16 +61,22 @@ pasajeros, la empresa decide vender 181 tiquetes. ¿Cuál es la probabilidad de 
 llegan a embarque puedan tener su silla asegurada y no se presenten quejas por “sobre-vender” sillas ante
 la aeronáutica civil? Asuma que las llegadas de los pasajeros siguen una distribución Poisson.
 
+
 ```{r,echo=FALSE}
+
 p=0.02
 n=180
 
 lambda=n*p
 lambda
+#lambda 3.6 serian las personas que no se presentan a embarque
+#el 98% seria el valor de las personas que se presentan a embarque = 176.4
+ppois(181,176.4)
+1-sum(dpois (0:181, 176.4))
 
-dpois(181,3.6)
+plot(0:180,dpois(0:180,176.4),main =expression(paste("Poisson donde ",lambda==176.4)),
+     xlab= "pasajeros que embarcan ",ylab = "Probabilidad",pch=19,col= "green" )
 
-dpois(181,lambda)
 ```
 
 
@@ -80,13 +88,15 @@ gaseosa que son declaradas producto NO CONFORME.
 ```{r, echo=FALSE}
 sd=5
 media=400
-
+#p(x > 415) = 1-p(x <=415)
 1-pnorm(415,media,sd)
+
+plot(0:180,dpois(0:180,176.4),main =expression(paste("Poisson donde ",lambda==176.4)),
+     xlab= "pasajeros que embarcan ",ylab = "Probabilidad",pch=19,col= "green" )
+
 ```
 
 
 
 
 =======
->>>>>>> 4a961ef6f6f430655b580015edcc6736ae6dc50b
->>>>>>> 920f79bdfedb4a09ab13a5d08545ff5757a4d7eb
