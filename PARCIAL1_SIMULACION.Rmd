@@ -78,7 +78,10 @@ producto con más de 415 mL es declarado como NO CONFORME. Determine el porcenta
 gaseosa que son declaradas producto NO CONFORME.
 
 ```{r}
+sd=5
+media=400
 
+1-pnorm(415,media,sd)
 ```
 
 
