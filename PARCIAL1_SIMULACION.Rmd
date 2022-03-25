@@ -27,7 +27,7 @@ pobladas de cuatro países en el año 1967:
 2.51 |7.63  |1.31 |7.70   |
 2.4 4| 7.50 |1.29 |7.00   |
 
-
+a) Construya un box-plot e identifique los puntos extremos. ¿Cuáles son las características más sobresalientes? ¿Hay outliers?
 ```{r, echo=F,message=FALSE, warning=FALSE}
 
 
@@ -54,16 +54,18 @@ boxplot(Japon,main = 'JAPON',col='pink',ylab='POBLACION',xlab='grafico D')
 
 **INTERPRETACION**
 
-***Grafico A:***En este boxplot podemos observar que  hay un dato atipico o outliers, el promedio es de 3.27, de su simetria podemos decir que es positiva lo que quiere decir que la mayoria de los datos se encuntran concentrados en los valores menores. 
+***Grafico A:***En este boxplot podemos observar que  hay un dato atipico o outliers, el promedio es de 3.27, de su simetria podemos decir que es positiva y asimetrica lo que quiere decir que la mayoria de los datos se concentran en la parte inferior de la distribucion.
 
 \n
-***Grafico B:***En la grafica B podemos decir que el quartil1 esta aproximado a 7.5 y su media se aproxima en 13, de su simetria podemos concluir que es positiva, ya que la mayoria de sus datos se encuentran en los ramgos de menor valor.\n
+***Grafico B:***En la grafica B podemos decir que el quartil1 esta aproximado a 7.5 y su media se aproxima en 13, de su simetria podemos concluir que es positiva, ya que la mayoria de sus datos se encuentran en los ramgos de menor valo, hay un outlier con un valor aproximado a  77\n
 
 
-***Grafico C:***En este boxplot podemos observar \n
+***Grafico C:***Por medio de esta grafica podemos concluir que su simetria esta sesgada a la derecha, por la ubicacion del quartil 3 podems decir que su media, mediana y moda no coinciden, no se encuentran datos atipicos, con respecto a las graficas A,B,D,E encontramos que su su rango es mas amplio, por lo que sus datos estan mas dispersos.  \n
 
 
 ***Grafico D:***En este boxplot podemos observar \n
+
+b)Compare los centros de cada población, sus dispersiones y su simetría. ¿Cuál es el país más homogéneamente habitado? ¿Cuáles son las características más sobresalientes? ¿Hay outliers?
 
 2. Avianca se encuentra estudiando la situación de venta de puesto en el vuelo Armenia – Bogotá puesto
 que ha identificado que el 2% de las personas que reservaron puesto, no se presentan a la hora del
@@ -113,8 +115,10 @@ plot(380:420, dnorm(380:420, mean=400,sd=5), type = 'l'
 
 
 
-x<-c(0:800,50)
+x<-c(380:420,50)
 y<-dnorm(x,400,5)
+qqnorm(y)
+qqline(y)
 plot(x,y,main ="Distribucion normal()",xlab="Numero de habitantes", ylab="Probabilidad", col="red", pch=19)
 
 
