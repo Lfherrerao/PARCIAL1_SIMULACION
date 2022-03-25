@@ -59,7 +59,7 @@ pasajeros, la empresa decide vender 181 tiquetes. ¿Cuál es la probabilidad de 
 llegan a embarque puedan tener su silla asegurada y no se presenten quejas por “sobre-vender” sillas ante
 la aeronáutica civil? Asuma que las llegadas de los pasajeros siguen una distribución Poisson.
 
-```{r}
+```{r,echo=FALSE}
 p=0.02
 n=180
 
@@ -77,7 +77,7 @@ experiencia que este proceso de embotellado sigue una distribución normal, y ta
 producto con más de 415 mL es declarado como NO CONFORME. Determine el porcentaje de las botellas de
 gaseosa que son declaradas producto NO CONFORME.
 
-```{r}
+```{r, echo=FALSE}
 sd=5
 media=400
 
