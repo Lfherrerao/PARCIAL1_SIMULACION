@@ -145,18 +145,17 @@ plot(380:420, dnorm(380:420, mean=400,sd=5), type = 'l'
   abline(v = 400)
   
 
+  x<-c(380:420,50)
+  y<-dnorm(x,400,5)
 
-
-x<-c(380:420,50)
-y<-dnorm(x,400,5)
-qqnorm(y)
+qqnorm(y,main ="Distribucion normal()",xlab="Numero de habitantes", ylab="Probabilidad", col="red", pch=19)
 qqline(y)
-plot(x,y,main ="Distribucion normal()",xlab="Numero de habitantes", ylab="Probabilidad", col="red", pch=19)
+# plot(x,y,main ="Distribucion normal()",xlab="Numero de habitantes", ylab="Probabilidad", col="red", pch=19)
 
 
 
 ```
-
+En la grafica podemos ver que los datos no estan dispersos normalmente.
 
 
 
