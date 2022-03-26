@@ -110,14 +110,15 @@ La probabilidad de que todas las personas que lleguen a embarque puedan tener su
 ```{r,echo=FALSE}
 
 p=0.02
-n=181
-
+n=180
+# El valor de lambda esta dado por n*p, pero el ejercicio nos pide la 
+#contraparte que seria el 98%, en conclusion se toma como lambda 176.4
 lambda=n*p
 
 #lambda 3.6 serian las personas que no se presentan a embarque
 #el 98% seria el valor de las personas que se presentan a embarque = 176.4
-#ppois(181,176.4)
-1-sum(dpois (0:181, 176.4))
+ppois(181,176.4)
+sum(dpois (0:181, 176.4))
 
 plot(100:250,dpois(100:250,176.4),main =expression(paste("Poisson donde ",lambda==176.4)),
      xlab= "pasajeros que embarcan ",ylab = "Probabilidad",pch=19,col= "green" )
@@ -150,13 +151,17 @@ plot(380:420, dnorm(380:420, mean=400,sd=5), type = 'l'
 
 qqnorm(y,main ="Distribucion normal()",xlab="Numero de habitantes", ylab="Probabilidad", col="red", pch=19)
 qqline(y)
+
 # plot(x,y,main ="Distribucion normal()",xlab="Numero de habitantes", ylab="Probabilidad", col="red", pch=19)
+
+#plot(x,y,main ="Distribucion normal()",xlab="Numero de habitantes", ylab="Probabilidad", col="red", pch=19)
+
 
 
 
 ```
+
+
 En la grafica podemos ver que los datos no estan dispersos normalmente.
 
 
-
-=======
